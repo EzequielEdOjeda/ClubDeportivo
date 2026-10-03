@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{673E6E01-2418-47F4-9ED6-3E261E63B6FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClubDeportivo</RootNamespace>
+    <AssemblyName>ClubDeportivo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Entidades\Actividad.cs" />
+    <Compile Include="Entidades\AsistenciaProfesor.cs" />
+    <Compile Include="Entidades\Carnet.cs" />
+    <Compile Include="Entidades\ConsultaNutricion.cs" />
+    <Compile Include="Entidades\Cuota.cs" />
+    <Compile Include="Entidades\Enumeraciones.cs" />
+    <Compile Include="Entidades\Inscripcion.cs" />
+    <Compile Include="Entidades\NoSocio.cs" />
+    <Compile Include="Entidades\Persona.cs" />
+    <Compile Include="Entidades\Profesor.cs" />
+    <Compile Include="Entidades\Rutina.cs" />
+    <Compile Include="Entidades\Socio.cs" />
+    <Compile Include="Entidades\Sueldo.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Datos\ActividadDAO.cs" />
+    <Compile Include="Datos\AsistenciaProfesorDAO.cs" />
+    <Compile Include="Datos\CarnetDAO.cs" />
+    <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\ConsultaNutricionDAO.cs" />
+    <Compile Include="Datos\CuotaDAO.cs" />
+    <Compile Include="Datos\DbHelper.cs" />
+    <Compile Include="Datos\InscripcionDAO.cs" />
+    <Compile Include="Datos\NoSocioDAO.cs" />
+    <Compile Include="Datos\ProfesorDAO.cs" />
+    <Compile Include="Datos\ReporteDAO.cs" />
+    <Compile Include="Datos\RutinaDAO.cs" />
+    <Compile Include="Datos\SocioDAO.cs" />
+    <Compile Include="Datos\SueldoDAO.cs" />
+    <Compile Include="Datos\UsuarioDAO.cs" />
+    <Compile Include="Negocio\ActividadNegocio.cs" />
+    <Compile Include="Negocio\CarnetNegocio.cs" />
+    <Compile Include="Negocio\CuotaNegocio.cs" />
+    <Compile Include="Negocio\NoSocioNegocio.cs" />
+    <Compile Include="Negocio\NutricionNegocio.cs" />
+    <Compile Include="Negocio\ProfesorNegocio.cs" />
+    <Compile Include="Negocio\ReporteNegocio.cs" />
+    <Compile Include="Negocio\RutinaNegocio.cs" />
+    <Compile Include="Negocio\SocioNegocio.cs" />
+    <Compile Include="Negocio\SueldoNegocio.cs" />
+    <Compile Include="Negocio\UsuarioNegocio.cs" />
+    <Compile Include="Formularios\UIHelper.cs" />
+    <Compile Include="Formularios\frmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmActividades.Designer.cs">
+      <DependentUpon>frmActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAsistenciaProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAsistenciaProfesores.Designer.cs">
+      <DependentUpon>frmAsistenciaProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCarnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCarnet.Designer.cs">
+      <DependentUpon>frmCarnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCuotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCuotas.Designer.cs">
+      <DependentUpon>frmCuotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmNoSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmNoSocios.Designer.cs">
+      <DependentUpon>frmNoSocios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmNutricion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmNutricion.Designer.cs">
+      <DependentUpon>frmNutricion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProfesores.Designer.cs">
+      <DependentUpon>frmProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRutinas.Designer.cs">
+      <DependentUpon>frmRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSocios.Designer.cs">
+      <DependentUpon>frmSocios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSueldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSueldos.Designer.cs">
+      <DependentUpon>frmSueldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmVencimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVencimientos.Designer.cs">
+      <DependentUpon>frmVencimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\frmActividades.resx">
+      <DependentUpon>frmActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAsistenciaProfesores.resx">
+      <DependentUpon>frmAsistenciaProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCarnet.resx">
+      <DependentUpon>frmCarnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCuotas.resx">
+      <DependentUpon>frmCuotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmNoSocios.resx">
+      <DependentUpon>frmNoSocios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmNutricion.resx">
+      <DependentUpon>frmNutricion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProfesores.resx">
+      <DependentUpon>frmProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRutinas.resx">
+      <DependentUpon>frmRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSocios.resx">
+      <DependentUpon>frmSocios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSueldos.resx">
+      <DependentUpon>frmSueldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmVencimientos.resx">
+      <DependentUpon>frmVencimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5d1ba4bb-8d76-4a63-8b8d-ae935be98b45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20e8f1b7-8e06-42a5-b66c-b17e65734d7f.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
