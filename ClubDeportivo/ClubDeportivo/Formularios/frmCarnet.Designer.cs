@@ -108,7 +108,7 @@ namespace ClubDeportivo.Formularios
             // btnEmitir
             // 
             this.btnEmitir.Enabled = false;
-            this.btnEmitir.Location = new System.Drawing.Point(17, 129);
+            this.btnEmitir.Location = new System.Drawing.Point(17, 145);
             this.btnEmitir.Name = "btnEmitir";
             this.btnEmitir.Size = new System.Drawing.Size(129, 26);
             this.btnEmitir.TabIndex = 7;
